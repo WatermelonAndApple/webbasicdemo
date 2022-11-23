@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本地时钟</title>
+</head>
+
+<body>
+    <div id="container">
+        <!-- 显示时间 -->
+        <div id="time"></div>
+        <!-- 显示日期 -->
+        <div id="date"></div>
+    </div>
+</body>
+
+</html>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 内容居中 */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* 时钟容器 */
+    #container {}
+
+    #date {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        text-align: right;
+    }
+
+    #time {
+        font-weight: bold;
+        font-size: 4rem;
+    }
+</style>
+<script>
+    function getLocalTime() {
+        var date = document.getElementById("date")
+        var time = document.getElementById("time")
+        // 系统时间
+        var systemTime = new Date().toLocaleString()
+        // 分割系统时间
+        var tmp = systemTime.split(" ")
+        date.innerHTML = tmp[0]
+        time.innerHTML = tmp[1]
+    }
+    // 显示时间
+    setInterval(getLocalTime, 1000)
+</script>

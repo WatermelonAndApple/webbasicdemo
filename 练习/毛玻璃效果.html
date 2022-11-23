@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>毛玻璃效果</title>
+</head>
+
+<body>
+    <div class="main">
+        <h2>
+            《望月怀远》
+        </h2>
+        <p>
+            海上生明月，天涯共此时。<br />
+            情人怨遥夜，竟夕起相思。<br />
+            灭烛怜光满，披衣觉露滋。<br />
+            不堪盈手赠，还寝梦佳期。
+        </p>
+    </div>
+</body>
+
+</html>
+<style>
+    /* 初始化页面 */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        /* /内容居中 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    body,
+    .main::before {
+        background: url('img/one.jpg') 0/cover fixed;
+    }
+
+    .main {
+        /* width: 500px; */
+        position: relative;
+        background: hsla(0, 0%, 100%, .25);
+        padding: 4%;
+        border-radius: 20px;
+        overflow: hidden;
+        font-size: 1.5em;
+        text-align: center;
+        box-shadow: 4px 6px 30px rgb(50, 50, 50);
+    }
+
+
+    .main::before {
+        /* background: red; */
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        /* 模糊 */
+        filter: blur(30px);
+        margin: -30px;
+    }
+</style>

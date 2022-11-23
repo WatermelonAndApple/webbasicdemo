@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碎片轮播图的轮播方式</title>
+    <!-- 引入外部的css文件和结束文件 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 容器 -->
+    <div class="container">
+        <!-- <div class="item">
+                第一面
+            <div class="one"></div>
+            第二面
+            <div class="two"></div>
+        </div> -->
+    </div>
+    <!-- 转换样式 -->
+    <div class="changeStyle">
+        <button value="1" onclick="getChoiced(this)">随机转换方式</button>
+        <button value="2" onclick="getChoiced(this)">左上到右下</button>
+        <button value="3" onclick="getChoiced(this)">向屏幕里扩散</button>
+        <button value="4" onclick="getChoiced(this)">往左上和右下</button>
+        <button value="5" onclick="getChoiced(this)">四周向中央</button>
+        <button value="6" onclick="getChoiced(this)">中间向四周</button>
+    </div>
+</body>
+</html>
+<script src="script.js"></script>

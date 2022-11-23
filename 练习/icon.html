@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font Awesome引入练习</title>
+    <!-- 引入fontAwesome图标 -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+<!-- <div class="fa fa-video-camera "></div> -->
+
+    <button id="1" class="black" onclick="a(this);"></button>
+    <button id="2"  onclick="a(this);"></button>
+    <button id="3"  onclick="a(this);"></button>
+    <button id="4"  onclick="a(this);"></button>
+    <button id="5"   onclick="a(this);"></button>
+    <button id="6"   onclick="a(this);"></button>
+
+</body> 
+
+</html>
+<style>
+button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    list-style: none;
+    background-color: #eee;
+}
+.black{
+    background-color: black;
+}
+</style>
+<script>
+    var li=document.querySelectorAll("ul li");
+    console.log(li);
+
+    // var b=document.querySelector(".black");
+    // console.log(b);
+    function a(ev){
+        var b=document.querySelectorAll("button");
+        var c=document.querySelector(".black");
+        // alert(b.length);
+        // b.style.backgroungColor="black";
+        // console.log(ev.getAttribute("id"));
+        b[ev.getAttribute("id")-1].classList.add("black");
+        c.classList.remove("black");
+
+    }
+</script>
